@@ -1,0 +1,194 @@
+h2 {
+	color: $primary-color;
+	font-size: rem-calc(38);
+}
+.azulBG {
+	background-color: $primary-color;
+}
+
+.blanco {
+	color: $white;
+}
+
+header {
+	position: relative;
+
+	#overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 745px;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2b689e+0,2c3d5b+100&0.7+0,0.7+100 */
+		background: -moz-linear-gradient(top,  rgba(43,104,158,0.7) 0%, rgba(44,61,91,0.7) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  rgba(43,104,158,0.7) 0%,rgba(44,61,91,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  rgba(43,104,158,0.7) 0%,rgba(44,61,91,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b32b689e', endColorstr='#b32c3d5b',GradientType=0 ); /* IE6-9 */
+	}
+
+	.navegacion {
+		position: absolute;
+		top: rem-calc(10);
+		left: 0;
+		width: 100%;
+	}
+
+	.encabezado {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		transform: translateY(-50%);
+		h1 {
+			border-top: 2px solid $white;
+			border-bottom: 2px solid $white;
+			color: $white;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.menu-icon,
+.menu-icon:hover {
+	width: rem-calc(60);
+	height: rem-calc(36);
+	margin-top: rem-calc(25);
+
+	&::after {
+		background-color: $white;
+		height: rem-calc(8);
+		box-shadow: 0 28px 0 white, 0 14px 0 white;
+	}
+}
+
+section.habitaciones {
+	.medium-4 a {
+		color: $black;
+	}
+	div.imagen {
+		position: relative;
+		div.titulo {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			padding-left: rem-calc(20);
+			h3 {
+				color: $white;
+			}
+		}
+	}
+	div.contenido {
+		background-color: $white;
+		padding: rem-calc(20);
+	}
+}
+
+.button {
+	@include button-style($secondary-color, darken($secondary-color, 10), $white);
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: rem-calc(16);
+	margin: rem-calc(20 0);
+}
+
+.imagen-separador {
+	height: 200px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: scroll;
+	@include breakpoint(medium) {
+		height: 350px;
+	}
+	@include breakpoint(large) {
+		background-size: cover;
+	}
+}
+.imagen-alberca {
+	background-image: url(../images/separators/small/separator01-image.jpg);
+	@include breakpoint(medium) {
+		background-image: url(../images/separators/medium/separator01-image.jpg);
+	}
+	@include breakpoint(large) {
+		background-image: url(../images/separators/large/separator01-image.jpg);
+	}	
+}
+.imagen-bar {
+	background-image: url(../images/separators/small/separator02-image.jpg);
+	@include breakpoint(medium) {
+		background-image: url(../images/separators/medium/separator02-image.jpg);
+	}
+	@include breakpoint(large) {
+		background-image: url(../images/separators/large/separator02-image.jpg);
+	}	
+}
+
+section.galeria-sobre-nosotros {
+	@include breakpoint(medium) {
+		height: rem-calc(560);
+		position: relative;
+	}
+	@include breakpoint(large) {
+		height: rem-calc(420);
+	}
+	.vacio {
+		@include breakpoint(medium) {
+			height: rem-calc(560);
+		}
+		@include breakpoint(large) {
+			height: rem-calc(420);
+		}
+	}
+	div.contenido-galeria-sobre-nosotros {
+		@include breakpoint(medium) {
+			position: absolute;
+			top: rem-calc(20);
+			left: 0;
+			width: 100%;
+		}
+	}
+}
+
+section.reservaciones {
+	padding: rem-calc(50 0);
+}
+
+footer {
+	background-color: $primary-color;
+	padding: rem-calc(30 0 0 0);
+	color: $white;
+
+	.menu {
+		a {
+			color: $white;
+		}
+	}
+	.informacion-contacto {
+		li {
+			position: relative;
+			height: 100px;
+			padding-left: rem-calc(60);
+			padding-top: rem-calc(35);
+			&:first-child {
+				padding-top: rem-calc(22);
+			}
+			i {
+				font-size: rem-calc(60);
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+	.social {
+		i {
+			font-size: rem-calc(60);
+		}
+	}
+	div.copyright {
+		background-color: darken($primary-color, 10);
+		p {
+			padding: rem-calc(20 0);
+			margin:0;
+		}
+	}
+}
